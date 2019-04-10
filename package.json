@@ -1,0 +1,43 @@
+{
+  "name": "logonlabs-js",
+  "version": "1.0.0",
+  "description": "Logon Labs Javascript API client",
+  "private": true,
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+  },
+  "keywords": [],
+  "authors": [
+    {
+      "name": "Howie Lee",
+      "email": "hlee@logonlabs.com"
+    }
+  ],
+  "devDependencies": {
+    "connect": "^3.6.6",
+    "css-loader": "^2.1.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "serve-static": "^1.13.2",
+    "style-loader": "^0.23.1",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
+    "webpack": "^4.29.5",
+    "webpack-cli": "^3.2.3"
+  },
+  "dependencies": {
+    "connect": "^3.6.6",
+    "crypto-js": "^3.1.9-1",
+    "css-loader": "^2.1.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "serve-static": "^1.13.2",
+    "style-loader": "^0.23.1",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
+    "webpack": "^4.29.5",
+    "webpack-cli": "^3.2.3"
+  }
+}

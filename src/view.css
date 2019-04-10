@@ -1,0 +1,14 @@
+#logonlabs-ui button {
+  background: #fefefe;
+  border-radius: 2px;
+  display: inline-block;
+  margin: 1rem;
+  padding: 1rem;
+  width: 7rem;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+#logonlabs-ui button:focus {
+  outline:0;
+}
