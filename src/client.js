@@ -12,7 +12,9 @@ const providers = {
     MICROSOFT: 'microsoft',
     FACEBOOK: 'facebook',
     LINKEDIN: 'linkedin',
-    OKTA: 'okta'
+    OKTA: 'okta',
+    TWITTER: 'twitter',
+    SLACK: 'slack'
 };
 
 const GOOGLE = {
@@ -35,14 +37,24 @@ const OKTA = {
     type: providers.OKTA,
     name: 'Okta'
 };
+const TWITTER = {
+    type: providers.TWITTER,
+    name: 'Okta'
+};
+const SLACK = {
+    type: providers.SLACK,
+    name: 'Slack'
+};
 
-var provider_list = [MICROSOFT, GOOGLE, FACEBOOK, LINKEDIN, OKTA];
+var provider_list = [MICROSOFT, GOOGLE, FACEBOOK, TWITTER, SLACK, LINKEDIN, OKTA];
 var provider_hash = {
     'microsoft': MICROSOFT,
     'google': GOOGLE,
     'facebook': FACEBOOK,
     'linkedin': LINKEDIN,
-    'okta': OKTA
+    'okta': OKTA,
+    'twitter': TWITTER,
+    'slack': SLACK
 }
 var css_loaded = false;
 
@@ -128,7 +140,9 @@ var api = new function() {
                     API.redirectLogin(response.token, redirect);
                 }
             } else {
-                callback(response);
+                if (callback) {
+                    callback(response);
+                }
             }
         });
     };
@@ -147,9 +161,12 @@ var api = new function() {
 };
 
 var ui = new function() {
-    this.button = function(id) {
+    this.button = function(id, options) {
         if (!css_loaded) {
             loadCSS();
+        }
+        if (!options) {
+            options = {};
         }
         api.getProviders(false, function(res) {
             console.log('getProviders');
@@ -160,11 +177,29 @@ var ui = new function() {
                     list.push(provider_hash[res.identity_providers[i].type]);
                 }
             } else {
-                list = provider_list;
+                list = false;
             }
-            view.addButtons(id, list);
+
+            view.addButtons(id, list, options);
         });
     };
+    // this.providers = function(id, options, res){
+    //     if (!css_loaded) {
+    //         loadCSS();
+    //     }
+    //     if (!options) {
+    //         options = {};
+    //     }
+    //     var list = [];
+    //     if (res && res.identity_providers) {
+    //         for(var i = 0; i < res.identity_providers.length; i++) {
+    //             list.push(provider_hash[res.identity_providers[i].type]);
+    //         }
+    //     } else {
+    //         list = false;
+    //     }
+    //     view.addButtons(id, list, options);
+    // };
 };
 
 var util = new function() {

@@ -12,3 +12,115 @@
 #logonlabs-ui button:focus {
   outline:0;
 }
+
+#logonlabs-ui {
+  padding: 0.25rem 0.25rem;
+  background: #f7f7f7;
+  border-radius: .25rem;
+  color: #3c3c3c;
+  font-family: Open Sans,sans-serif;
+}
+
+#logonlabs-ui.icon{
+  display: flex;
+  background: none;
+  margin: 0 auto;
+}
+
+#logonlabs-ui.error {
+  background: #f7f7f7;
+  display: block;
+}
+
+#logonlabs-ui .footer{
+  list-style: none;
+  padding-inline-start: .5rem;
+  margin-block-start: .5rem;
+  margin-block-end: .5rem;
+}
+
+#logonlabs-ui .footer svg{
+  height: 1rem;
+  vertical-align: top;
+  margin-right: .5rem;
+}
+
+#logonlabs-ui .item {
+  cursor: pointer;
+  background-color: #fff;
+  padding: .95em 1em;
+  margin: .35em .25em;
+  border: 1px solid rgba(51,51,51,.3);
+  border-radius: .2rem;
+  font-size: 1em;
+  text-align: center;
+  color: white;
+}
+
+#logonlabs-ui .message {
+  color: #ff4441;
+}
+
+#logonlabs-ui.icon .item {
+  flex: 1;
+  padding: 0;
+  margin: 0;
+  margin-right: .25rem;
+  text-align: center;
+}
+
+#logonlabs-ui .item span {
+  font-weight: 400;
+  line-height: 1.5rem;
+  vertical-align: top;
+  display: inline-block;
+}
+
+#logonlabs-ui .item svg {
+  fill: #fff;
+  height: 1.25rem;
+  vertical-align: top;
+  margin: .125rem .5rem;
+}
+
+#logonlabs-ui.icon .item svg {
+  fill: transparent;
+  height: 2rem;
+  vertical-align: top;
+  margin: 0.25rem;
+}
+
+#logonlabs-ui .item[data-name=microsoft] {
+  background-color: #dd3a11;
+}
+
+#logonlabs-ui .item[data-name=google] {
+  background-color: #3984f6;
+}
+
+#logonlabs-ui.icon .item[data-name=microsoft] {
+  background-color: #ffffff;
+}
+
+#logonlabs-ui.icon .item[data-name=google] {
+  background-color: #ffffff;
+}
+
+#logonlabs-ui .item[data-name=linkedin] {
+  background-color: #0077b5;
+}
+
+#logonlabs-ui .item[data-name=twitter] {
+  background-color: #319cff;
+}
+
+#logonlabs-ui .item[data-name=slack] {
+  background-color: #4a154b;
+}
+#logonlabs-ui .item[data-name=facebook] {
+  background-color: #3C5A99;
+}
+
+#logonlabs-ui .item[data-name=okta] {
+  background-color: #2f96c6
+}
