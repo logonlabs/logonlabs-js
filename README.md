@@ -1,13 +1,13 @@
 # LogonLabs JavaScript
+
 The official LogonLabs JavaScript client library.
-
 ## Download
-    https://cdn.logonlabs.com/dist/logonlabs.min.js
-    
-## LogonLabs API
----
 
-- Prior to coding, some configuration is required at https://logonlabs.com/app/#app-settings.
+    https://cdn.logonlabs.com/dist/logonlabs.min.js
+## LogonLabs API
+
+
+- Prior to coding, some configuration is required at https://logonlabs.com/app/#/app-settings.
 
 - For the full Developer Documentation please visit: https://logonlabs.com/docs/api/
 
@@ -47,7 +47,7 @@ LogonClient.startLogin({
 ### JavaScript Only Workflow
 The following workflow is required if you're using JavaScript UI components.
 #### Buttons
-This feature allows you to add in the identity providers' buttons dynamically in accordance with your app-settings configurations.
+This feature allows you to add the identity providers' buttons dynamically as defined in your app-settings.
 ```html
 <div id="logonlabs"></div>
 ```
@@ -64,17 +64,17 @@ LogonClient.ui.button('logonlabs', {
 ### Helper Methods
 #### GetProviders
 This method is used to retrieve a list of all providers enabled for the application.
-If an email address is passed to the method, the list returned will be of those providers enabled for the domain of the specified email address.
+If an email address is passed to the method, it will return the list of providers available for that email domain.
 ```javascript
 LogonClient.getProviders('email_address', (res)=> {
     var identity_providers = res.identity_providers;
     for(var i = 0; i < identity_providers.length; i++) {
-        //each individual provider available for this email address
+        //each individual providers available for this email address
     }
 });
 ```
 #### Decrypt
-The JavaScript SDK has built in methods for decrypting strings using the AES encryption standard.  Pass in the encrypted value to decrypt. 
+The JavaScript SDK has built in methods for decrypting strings using AES encryption.  Pass in the encrypted value to decrypt. 
 ```javascript
 var decrypt_data = LogonClient.decrypt(encrypted_data);
 ```
