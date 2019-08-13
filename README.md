@@ -7,14 +7,14 @@ The official LogonLabs JavaScript client library.
 ## LogonLabs API
 
 
-- Prior to coding, some configuration is required at https://logonlabs.com/app/#/app-settings.
+- Prior to coding, some configuration is required at https://app.logonlabs.com/app/#/app-settings.
 
-- For the full Developer Documentation please visit: https://logonlabs.com/docs/api/
+- For the full Developer Documentation please visit: https://app.logonlabs.com/docs/api/
 
 ---
 ### Instantiating a new client
 
-- Your `APP_ID` can be found in [App Settings](https://logonlabs.com/app/#/app-settings)
+- Your `APP_ID` can be found in [App Settings](https://app.logonlabs.com/app/#/app-settings)
 - The `LOGONLABS_API_ENDPOINT` should be set to `https://api.logonlabs.com`
 
 Create a new instance of `LogonClient`.  
