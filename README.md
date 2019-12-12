@@ -73,8 +73,3 @@ LogonClient.getProviders('email_address', (res)=> {
     }
 });
 ```
-#### Decrypt
-The JavaScript SDK has built in methods for decrypting strings using AES encryption.  Pass in the encrypted value to decrypt. 
-```javascript
-var decrypt_data = LogonClient.decrypt(encrypted_data);
-```
