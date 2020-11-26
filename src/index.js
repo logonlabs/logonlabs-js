@@ -2,26 +2,28 @@
  * Logon Labs Javascript API client
  */
 
-import client from './client.js';
+const clientdefault = require('./client.js');
+const client = clientdefault.default;
 
-(function(w){
-    w['LogonClient'] = new function(){
-        let me = this;
-        me.configure = client.configure;
-        me.startLogin = client.api.startLogin;
-        me.getProviders = client.api.getProviders;
-        me.ping = client.api.ping;
-        //me.api = client.api;
-        //me.util = client.util;
-        me.decrypt = client.util.decrypt;
-        //me.key = client.key;
-        me.identityProviders = client.providers;
+const logon = new (function () {
+    let me = this;
+    me.configure = client.configure;
+    me.startLogin = client.api.startLogin;
+    me.getProviders = client.api.getProviders;
+    me.ping = client.api.ping;
+    me.api = client.api;
+    me.providers = client.providers;
+    me.providersButtons = client.providers_buttons;
+    me.ui = client.ui;
+    client.initialize();
+})();
 
-        me.ui = client.ui;
-        client.initialize();
-    };
+(function (w) {
+    w['LogonClient'] = logon;
     if (w['logonAsync']) {
         w['logonAsync']();
     }
 })(window);
 
+module.exports = logon;
+module.exports.logon = logon;
