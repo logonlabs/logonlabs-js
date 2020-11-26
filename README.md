@@ -3,7 +3,7 @@
 The official LogonLabs JavaScript client library.
 ## Download
 
-    https://cdn.logonlabs.com/dist/logonlabs.min.js
+    https://cdn.logonlabs.com/dist/logonlabs.2.2.min.js
 ## LogonLabs API
 
 
